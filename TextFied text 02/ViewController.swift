@@ -27,8 +27,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     @IBAction func buttonPressed(_ sender: Any) {
         
-       myLabel.text = myTextFied.text
+        myLabel.text = myTextFied.text
         myTextFied.text = ""
+        myTextFied.resignFirstResponder()
     }
     //UItextFiedDelegate metrod
     //called when 'return'key pressed. teturn No to ignore
@@ -37,6 +38,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         print("I pressed return Key")
         //키패드내림
         myTextFied.resignFirstResponder()
+        
         return true
 
 }
